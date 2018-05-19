@@ -14,8 +14,9 @@ public class MDUrlFactory {
     }
 
     String encodeUrl(String url) throws UnsupportedEncodingException {
-        String root="https://github.com/szuming/DesignPattern/blob/master";         //url根部
-        url=url.substring(url.indexOf("src"));                                      //从src开始分割，包括src
+        String root="https://github.com/szuming/BookReading/blob/master";
+        //url根部
+        url=url.substring(url.indexOf("DesignPattern"));                                      //从src开始分割，包括src
         String []urls=url.split("\\\\");                                     //以\划分
         url= root;
         for(String temp:urls){
