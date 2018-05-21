@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
       <module name="BookReading" target="1.8" />
+      <module name="BookReadingGradle_main" target="1.8" />
+      <module name="BookReadingGradle_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

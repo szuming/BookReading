@@ -41,7 +41,52 @@
 |p110|GEO使用场景|[null](https://www.baidu.com)|附近位置，摇一摇
 
 
+## 第四章--客户端
+|  #  |      Title     |   src   |  重点                
+|-----|----------------|---------------|-------------
+|p114|redis通信协议RESP|[redis各语言客户端实现](http://redis.io/clients)|按格式与reids服务器交互
+|p123|jedis直连与线程池比较|[null](https://www.baidu.com)|直连简单用于长期连接，连接池管理与保护连接，无需新生连接
+|p134|redis输入缓冲区异常处理|[null](https://www.baidu.com)|client list精确定位异常的连接；info clients找出最大的输入缓冲区
+|p137|redis输出缓冲区的预防|[null](https://www.baidu.com)|
+|p147|客户端常见异常|[null](https://www.baidu.com)|无法获取连接，读写超时，连接超时，客户端缓冲区异常等
 
+
+## 第五章--持久化
+|  #  |      Title     |   src   |  重点                
+|-----|----------------|---------------|-------------
+|p155|RDB持久化|[LZF算法进行压缩](https://blog.csdn.net/zhanfu2905/article/details/68947902)|使用bgsave执行，父进程会fork子进程来执行RDB
+|p157|RDB优缺点分析|[null](https://www.baidu.com)|二进制文件适用于备份与全量复制，加载恢复速度快于AOF；因为fork无法实时备份，兼容问题
+|p158|AOF持久化|[null](https://www.baidu.com)|将每个命令写入日记中，重启时再重新执行AOF文件中的命令来达到目的
+
+
+## 第六章--复制
+|  #  |      Title     |   src   |  重点                
+|-----|----------------|---------------|-------------
+|p171|一主一从|[null](https://www.baidu.com)|当并发量高且需要持久化时可通过在从节点开启AOP来保证性能跟数据持久化
+|p172|一主多从|[null](https://www.baidu.com)|可实现读写分离，当读占比较大资源时交给从节点去完成读动作，但写命令会让主节点给多个从节点发送命令消耗网络
+|p172|树状主从|[null](https://www.baidu.com)|从节点可以作为主节点给根主节点分担负载压力
+|p173|复制过程|[null](https://www.baidu.com)|1.保存主节点的信息2.建立socket连接3.发送ping4.密码验证5.同步数据集6.命令持续发送 
+|p177|数据同步|[null](https://www.baidu.com)|通过主从各自复制偏移量，复制积压缓存区，主节点运行id实现
+|p178|全量复制|[null](https://www.baidu.com)|从节点发送psync命令，主节点执行bgsave，产生的RDB文件发送给从节点
+|p181|部分复制|[null](https://www.baidu.com)|若因网络或被切断电源等原因主从节点失去连接，从节点可要求主节点补发部分缺失数据（通过复制偏移量计算这部分数据）
+|p183|心跳|[null](https://www.baidu.com)|为了维护长连接而发送心跳命令，主节点默认每隔10秒对从节点发送ping，从节点每秒都会发送replconf来上报自身复制偏移量
+|p184|异步复制|[null](https://www.baidu.com)|主节点执行完客户端的命令会立刻返回结果给客户端，并不等待子节点完成复制，所以复制过程是异步的
+|p184|主从读写分离|[null](https://www.baidu.com)|只需向主节点写命令，从节点复杂读取数据返还给主节点
+
+
+## 第七章--阻塞
+|  #  |      Title     |   src   |  重点     
+|-----|----------------|---------------|-------------
+|p189|发现阻塞|[null](https://www.baidu.com)|利用log4j日志系统统计异常信息，通过发邮件/短信/微信报警
+
+          
+
+
+
+
+
+
+### 模仿jedis
 
 
 

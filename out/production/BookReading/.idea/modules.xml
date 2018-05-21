@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BookReading.iml" filepath="$PROJECT_DIR$/.idea/BookReading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BookReadingGradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/BookReadingGradle_main.iml" group="BookReadingGradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BookReadingGradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/BookReadingGradle_test.iml" group="BookReadingGradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/Gradle.iml" />
     </modules>
   </component>
 </project>

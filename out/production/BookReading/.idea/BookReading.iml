@@ -7,5 +7,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jedis-2.9.0" level="project" />
+    <orderEntry type="library" name="protostuff-api-1.0.8" level="project" />
+    <orderEntry type="library" name="Gradle: com.dyuproject.protostuff:protostuff-api:1.0.8" level="project" />
+    <orderEntry type="library" name="Gradle: io.protostuff:protostuff-runtime:1.5.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.dyuproject.protostuff:protostuff-core:1.0.8" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-pool2:2.4.2" level="project" />
   </component>
 </module>
