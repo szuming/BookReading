@@ -9,6 +9,5 @@ public class EncodeUrl {
         Scanner reader=new Scanner(System.in);
         String url=reader.next();
         url=mdUrlFactory.encodeUrl(url);
-        System.out.println(url);
     }
 }

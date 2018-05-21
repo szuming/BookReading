@@ -33,10 +33,8 @@
 |p75|慢查询分析|[null](https://www.baidu.com)|记录命令的实际执行时间，用于性能分析
 |p86|Pipeline优化RTT|[null](https://www.baidu.com)|与mget等批量操作命令相似，都是为了减少命令网络传输时间，但mget是一条命令，Pipeline将多条命令组成命令块发给redis服务端
 |p88|redis事务|[null](https://www.baidu.com)|redis事务未提供回滚功能且不支持命令之间的逻辑关系计算
-|p88|redis使用Lua脚本|[null](https://www.baidu.com)|Lua脚本在redis中是原子执行的，且可以定制自己的命令存储在redis供多次调用，还可以减少网络开销
+|p88|redis使用Lua脚本|[null](https://www.baidu.com)|
 |p100|使用Bitmaps计算用户访问量|[null](https://www.baidu.com)|Bitmaps实际上是字符串，但是可以对其进行位操作
-|p109|redis发布订阅的使用场景|[null](https://www.baidu.com)|聊天室，公告牌，服务
-|p110|GEO使用场景|[null](https://www.baidu.com)|附近位置，摇一摇
 
 
 
