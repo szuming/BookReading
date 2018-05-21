@@ -30,6 +30,8 @@
 |p72|多数据库|[null](https://www.baidu.com)|因为Redis是单进程所以该功能逐渐被抛弃，若需要可通过一台服务器配置多个redis实例（以端口区分）实现
 
 ## 第三章--小功能大用处
+|  #  |      Title     |   src   |  重点                
+|-----|----------------|---------------|-------------
 |p75|慢查询分析|[null](https://www.baidu.com)|记录命令的实际执行时间，用于性能分析
 |p86|Pipeline优化RTT|[null](https://www.baidu.com)|与mget等批量操作命令相似，都是为了减少命令网络传输时间，但mget是一条命令，Pipeline将多条命令组成命令块发给redis服务端
 |p88|redis事务|[null](https://www.baidu.com)|redis事务未提供回滚功能且不支持命令之间的逻辑关系计算
